@@ -66,7 +66,17 @@
     ```c++
     export PATH=/home/hungbt/Softwares/mpich3.3.2/install/bin:$PATH
     ```
-#### c) Install MP
+#### c) Install G4MPI source
+- Create a new folder name "G4MPI" inside "Softwares" folder
+- Copy "source" folder in "/home/hungbt/Softwares/Geant4.10.07/source/examples/extended/parallel/MPI" to "G4MPI" folder
+- Create 2 new folders "build" and "install"
+- Type 
+
+    ```c++
+    $ cmake -DGeant4_DIR=/home/hungbt/Softwares/Geant4.10.07/install/lib/Geant4-10.7.4 -DCMAKE_INSTALL_PREFIX=/home/hungbt/Softwares/G4MPI/install ../source
+    $ make
+    $ sudo make install
+    ```
 
 ## 🏃‍♂️ How to run
 - Create a new folder to build example. For example, I created "bld" folder.
@@ -90,8 +100,7 @@
     ```
 
 ## 📒 References
-1) [Capote, R., Jeraj, R., Ma, C. M., Rogers, D. W., Sánchez-Doblado, F., Sempau, J., ... & Siebers, J. V. (2006). Phase-space database for external beam radiotherapy. Summary report of a consultants' meeting.](https://inis.iaea.org/collection/NCLCollectionStore/_Public/37/073/37073778.pdf?r=1)
-2) [Cortés-Giraldo, M. A., Quesada, J. M., Gallardo, M. I., & Capote, R. (2009). Geant4 interface to work with IAEA phase-space files.](https://www-nds.iaea.org/phsp/Geant4/G4IAEAphsp_HowTo.pdf)
+
 ## 🚀 About Me
 **Bùi Tiến Hưng**
 
