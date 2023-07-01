@@ -66,6 +66,10 @@
     ```c++
     export PATH=/home/hungbt/Softwares/mpich3.3.2/install/bin:$PATH
     ```
+  - Add lib folder to LD_LIBRARY_PATH
+    ```c++
+    export LD_LIBRARY_PATH=/home/hungbt/Softwares/mpich3.3.2/install/lib:$LD_LIBRARY_PATH
+    ```
 #### c) Install G4MPI source
 - Create a new folder name "G4MPI" inside "Softwares" folder
 - Copy "source" folder in "/home/hungbt/Softwares/Geant4.10.07/source/examples/extended/parallel/MPI" to "G4MPI" folder
@@ -81,14 +85,14 @@
 ## 🏃‍♂️ How to run
 - Create a new folder to build example. For example, I created "bld" folder.
     ```c++
-    cd G4IAEApsf-Reader
+    cd exMPI03
     mkdir bld
     cd bld
     ```
 - Build
     ```c++
-    cmake ..
-    make -j4
+    $ cmake -DG4mpi_DIR=/home/hungbt/Softwares/G4MPI/install/lib/G4mpi-10.7.4 -DCMAKE_CXX_COMPILER=mpicxx -DGeant4_DIR=/home/hungbt/Softwares/Geant4.10.07/install/lib/Geant4-10.7.4 ../
+    $ make -j4
     ```
 - Run example in interactive mode
     ```c++
@@ -96,7 +100,7 @@
     ```
 - Run example in batch mode
     ```c++
-    ./SimApp run.mac
+    $ mpiexec -np 4 ./exMPI03 run.mac
     ```
 
 ## 📒 References
