@@ -66,7 +66,7 @@
     ```c++
     export PATH=/home/hungbt/Softwares/mpich3.3.2/install/bin:$PATH
     ```
-  - Add lib folder to LD_LIBRARY_PATH
+- Add lib folder to LD_LIBRARY_PATH
     ```c++
     export LD_LIBRARY_PATH=/home/hungbt/Softwares/mpich3.3.2/install/lib:$LD_LIBRARY_PATH
     ```
